@@ -18,4 +18,9 @@ public record Repo(String name, Owner owner, Branch[] branches) {
 
     }
   }
+
+  @JsonIgnoreProperties(ignoreUnknown = true)
+  public record Request(String name, Owner owner, boolean fork) {
+
+  }
 }
